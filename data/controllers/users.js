@@ -29,10 +29,8 @@ const updateUser = (req, res) => {
 const deleteUser = (req, res) => {
     // users.deleteOne({})
     const userIndex = users.indexOf(u=> u.id == req.params.id)
-    users.splice(user, 1)
-    res.json({
-        deletedId: userIndex + 1 
-    })
+    users.splice(userIndex, 1)
+    res.json('deleted a user!')
 }
 
 module.exports = {
